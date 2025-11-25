@@ -17,6 +17,7 @@ node_modules/
 
 # env
 .env
+.env.local
 .env.production
 .dev.vars
 
@@ -29,5 +30,20 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# pm2
+.pm2/
+pids/
+*.pid
+*.seed
+
 # misc
 .DS_Store
+*.backup
+*.bak
+*.tar.gz
+*.zip
+
+# database (local D1)
+*.db
+*.sqlite
+*.sqlite3
