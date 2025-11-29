@@ -42,7 +42,7 @@ npm run build
 ### 3. Server Started ✅
 ```bash
 pm2 start ecosystem.config.cjs
-# Status: Online on port 3000
+# Status: Online on port 4000
 ```
 
 ---
@@ -88,10 +88,10 @@ Response: {"success":true,"data":[...]}
 **Step 4:** Create OAuth 2.0 Credentials
 - Application type: Web application
 - Authorized JavaScript origins:
-  - `http://localhost:3000`
+  - `http://localhost:4000`
   - `https://your-domain.pages.dev`
 - Authorized redirect URIs:
-  - `http://localhost:3000`
+  - `http://localhost:4000`
   - `https://your-domain.pages.dev`
 
 **Step 5:** Update Client ID in `public/static/app.js`
@@ -238,7 +238,7 @@ pm2 stop taskflow-lite      # Stop app
 pm2 delete taskflow-lite    # Remove from PM2
 
 # Utilities
-npm run clean-port          # Kill process on port 3000
+npm run clean-port          # Kill process on port 4000
 ```
 
 ---

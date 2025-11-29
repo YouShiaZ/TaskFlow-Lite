@@ -1,14 +1,21 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "taskflow-lite",
-  "compatibility_date": "2025-11-25",
-  "pages_build_output_dir": "./dist",
-  "compatibility_flags": ["nodejs_compat"],
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "taskflow-production",
-      "database_id": "your-database-id-here"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "taskflow-lite",
+	"compatibility_date": "2025-11-25",
+	"pages_build_output_dir": "./dist",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "taskflow-production",
+			"database_id": "your-database-id-here"
+		},
+		{
+			"binding": "taskflow_local",
+			"database_name": "taskflow_local",
+			"database_id": "fb626578-bd41-4d2a-9228-3a01ef95203c"
+		}
+	]
 }

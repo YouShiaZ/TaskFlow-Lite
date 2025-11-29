@@ -284,7 +284,7 @@ db:migrate:local     # Apply migrations locally
 db:migrate:prod      # Apply migrations to production
 db:console:local     # D1 console (local)
 db:console:prod      # D1 console (production)
-clean-port           # Kill process on port 3000
+clean-port           # Kill process on port 4000
 ```
 
 #### `wrangler.jsonc`
@@ -309,8 +309,8 @@ clean-port           # Kill process on port 3000
 {
   name: 'taskflow-lite',
   script: 'npx wrangler pages dev dist',
-  args: '--d1=taskflow-production --local --ip 0.0.0.0 --port 3000',
-  env: { NODE_ENV: 'development', PORT: 3000 },
+  args: '--d1=taskflow-production --local --ip 0.0.0.0 --port 4000',
+  env: { NODE_ENV: 'development', PORT: 4000 },
   instances: 1,
   exec_mode: 'fork'
 }
@@ -488,7 +488,7 @@ Local Machine
     ↓
 npm run build → dist/
     ↓
-Wrangler dev server (port 3000)
+Wrangler dev server (port 4000)
     ↓
 Local D1 database (.wrangler/state/v3/d1)
 ```

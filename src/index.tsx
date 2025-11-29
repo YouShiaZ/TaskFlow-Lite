@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
-import { serveStatic } from 'hono/cloudflare-workers';
+import { serveStatic } from 'hono/cloudflare-pages';
 import type { CloudflareBindings, User, Task, CreateTaskInput, UpdateTaskInput, Settings } from './types';
 import {
   generateId,
@@ -20,9 +20,9 @@ const app = new Hono<{ Bindings: Bindings }>();
 // Enable CORS for all routes
 app.use('*', cors());
 
-// Serve static files
-app.use('/static/*', serveStatic({ root: './public' }));
-app.use('/favicon.ico', serveStatic({ path: './public/favicon.ico' }));
+// Serve static assets via Cloudflare Pages binding
+app.use('/static/*', serveStatic({ root: './' }));
+app.use('/favicon.ico', serveStatic({ path: './favicon.ico' }));
 
 // ============================================
 // AUTH ROUTES

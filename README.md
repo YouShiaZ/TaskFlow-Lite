@@ -100,7 +100,7 @@ npm run db:migrate:local
 3. Enable **Google Calendar API** and **Gmail API**
 4. Create OAuth 2.0 credentials (Web application)
 5. Add authorized redirect URIs:
-   - `http://localhost:3000` (development)
+   - `http://localhost:4000` (development)
    - `https://your-domain.pages.dev` (production)
 6. Copy `Client ID` and update in `public/static/app.js`:
    ```javascript
@@ -140,7 +140,7 @@ npm run dev:sandbox
 
 ### 6️⃣ Access the Application
 
-Open your browser to: **http://localhost:3000**
+Open your browser to: **http://localhost:4000**
 
 ---
 
@@ -419,10 +419,10 @@ npm run db:console:local
 
 ### Port Already in Use
 ```bash
-# Kill process on port 3000
-fuser -k 3000/tcp
-# or
+# Kill process on port 4000
 npm run clean-port
+# or run dev on a different port
+npx wrangler pages dev dist --d1=taskflow-production --local --ip 0.0.0.0 --port 5000
 ```
 
 ### Google OAuth Not Working

@@ -96,7 +96,7 @@ After completing this setup:
 **Authorized JavaScript origins:**
 Add these URLs (click "Add URI" for each):
 ```
-http://localhost:3000
+http://localhost:4000
 http://localhost:5173
 https://3000-ilm22kqegiuez2npg5xf9-a402f90a.sandbox.novita.ai
 https://your-domain.pages.dev
@@ -105,7 +105,7 @@ https://your-domain.pages.dev
 **Authorized redirect URIs:**
 Add these URLs:
 ```
-http://localhost:3000
+http://localhost:4000
 http://localhost:5173
 https://3000-ilm22kqegiuez2npg5xf9-a402f90a.sandbox.novita.ai
 https://your-domain.pages.dev

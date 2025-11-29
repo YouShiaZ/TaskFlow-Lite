@@ -174,10 +174,10 @@ npm run db:migrate:local
 ### Testing
 ```bash
 # Test API
-curl http://localhost:3000/api/tasks/[USER_ID]
+curl http://localhost:4000/api/tasks/[USER_ID]
 
 # Test frontend
-open http://localhost:3000
+open http://localhost:4000
 ```
 
 ---
@@ -198,8 +198,8 @@ pm2 logs taskflow-lite --nostream
 
 ### Port Already in Use?
 ```bash
-# Kill process on port 3000
-fuser -k 3000/tcp
+# Kill process on port 4000
+npm run clean-port
 
 # Restart
 pm2 restart taskflow-lite
