@@ -10,7 +10,7 @@
 		{
 			"binding": "DB",
 			"database_name": "taskflow-production",
-			"database_id": "your-database-id-here"
+			"database_id": "fb626578-bd41-4d2a-9228-3a01ef95203c"
 		},
 		{
 			"binding": "taskflow_local",
